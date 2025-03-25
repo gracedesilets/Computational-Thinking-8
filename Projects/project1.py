@@ -21,4 +21,4 @@ s4 = codesters.Sprite("gossipgirl.jpeg", -100, -100)
 s4.set_size(0.7)
 
 message1 = codesters.Text("Grace Desilets", 0, 220,"red")
-message2 = codesters.Text("I love cats, Gossip Girl, Taylor and Hamilton!!", 0, -220,"black")
+message2 = codesters.Text("I love cats, the tv show Gossip Girl, Taylor and Hamilton!", 0, -220,"black")
