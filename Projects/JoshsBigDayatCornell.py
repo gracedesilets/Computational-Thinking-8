@@ -28,7 +28,7 @@ window.tracer(0)
 # TODO - create your player character
 s1 = create_sprite("Josh2", -300, 0)
 # TODO - set your background
-set_background
+set_background("Cornell")
 # TODO - set the starting value for your variable
 
 # Section 3: Controls
