@@ -26,7 +26,8 @@ window.tracer(0)
 
 # Section 2: Setup
 # TODO - create your player character
-s1 = create_sprite("download")
+s1 = create_sprite("Josh" -200, 0)
+
 # TODO - set your background
 # TODO - set the starting value for your variable
 
