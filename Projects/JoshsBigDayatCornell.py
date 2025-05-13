@@ -27,7 +27,7 @@ window.tracer(0)
 # Section 2: Setup
 # TODO - create your player character
 s1 = create_sprite("Josh2", -300, 0)
-s2 = create_sprite(teacher)
+s2 = create_sprite("teacher", 0, 0)
 # TODO - set your background
 # TODO - set the starting value for your variable
 window.listen()
