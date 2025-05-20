@@ -23,25 +23,115 @@ def get_distance(s1, s2):
 	return math.sqrt(dx*dx + dy*dy)
 window = turtle.Screen()
 window.tracer(0)
-# Section 2: Setup
-# TODO - create your player character
-set_background("cornell")
+
+window = turtle.Screen()
+window.bgcolor("black")
+window.title("JoshsBigDayAtCornell")
+
+# intro message
+message = turtle.Turtle()
+message.color("white")
+message.penup()
+message.hideturtle()
+message.goto(0, 0)
+message.write("Welcome to Josh's Big Day at Cornell! He's going to school now",
+              align="center", font=("Courier", 13, "bold"))
+
+#updating window 
+window.update()
+
+# clear the message before the game starts
+time.sleep(5)
+message.clear()
+#ok it took me a little while to figure out how to do this message stuff but it went pretty well?
+message = turtle.Turtle()
+message.color("white")
+message.penup()
+message.hideturtle()
+message.goto(0, 0)
+message.write("Oh no! Looks like good ol Josh forgot his homework",
+			  align="center", font=("Courier", 16, "bold"))
+window.update()
+time.sleep(3)
+message.clear()
+
+message = turtle.Turtle()
+message.color("white")
+message.penup()
+message.hideturtle()
+message.goto(0, 0)
+message.write("Son of a biscuit!",
+              align="center", font=("Courier", 16, "bold"))
+window.update()
+time.sleep(3)
+message.clear()
+message = turtle.Turtle()
+message.color("white")
+message.penup()
+message.hideturtle()
+message.goto(0, 0)
+message.write("Josh arrived to Cornell and felt the disapproving eyes of his peers",
+              align="center", font=("Courier", 13, "bold"))
+window.update()
+time.sleep(5)
+message.clear()
+message = turtle.Turtle()
+message.color("white")
+message.penup()
+message.hideturtle()
+message.goto(0, 0)
+message.write("His stomach dropped. His GPA trembled",
+              align="center", font=("Courier", 13, "bold"))
+window.update()
+time.sleep(3)
+message.clear()
+message = turtle.Turtle()
+message.color("white")
+message.penup()
+message.hideturtle()
+message.goto(0, 0)
+message.write("He laughed nervously. His professor did not",
+			  align="center", font=("Courier", 13, "bold"))
+window.update()
+time.sleep(3)
+message.clear()
+message = turtle.Turtle()
+message.color("white")
+message.penup()
+message.hideturtle()
+message.goto(0, 0)
+message.write("Josh LEAPT out the window! Run Josh run!!!!",
+              align="center", font=("Courier", 13, "bold"))
+window.update()
+time.sleep(5)
+message.clear()
+message = turtle.Turtle()
+message.color("white")
+message.penup()
+message.hideturtle()
+message.goto(0, 0)
+message.write("use W, A, S, D to move",
+			  align="center", font=("courier", 13, "bold"))
+window.update()
+time.sleep(3)
+message.clear()
+set_background("download")
+
+#creating the sprite
 s1 = create_sprite("Josh2", -250, 0)
+
 s1.penup()
 s1.goto(-250, 0)
 
 
 
-# List of obstacles
+#obstacles
 obstacles = []
 
-# Lives variable
+# my variable (i wanted to name it something creative like 'pencils' yk cuz of the school theme but i couldn't figure out how)
 lives = 3
 
-# Obstacle creation
-
-
-# Movement controls
+# movement
 def move_right():
     s1.setheading(0)
     s1.forward(5)
@@ -71,24 +161,24 @@ while True:
     timer += 1
 
     # 
-    if timer % 30 == 0:
+    if timer % 20 == 0:
          y_position = random.randint(-250, 250)
          s2 = create_sprite("teacher", 300,y_position)
          s2.setheading(180)
          obstacles.append(s2)
 
-    # Move obstacles and check collisions
+    # checking for collisions (bc i'm a responsible coder)
     for s2 in obstacles[:]:
         s2.forward(10)
         if s1.distance(s2) < 50:
             lives -= 1
-            print(f"💥 You lost a life! Lives left: {lives}")
+            print(f"you lost a life! noooo. lives left: {lives}")
             s2.hideturtle()
             obstacles.remove(s2)
 
 
             if lives <= 0:
-                print("☠️ GAME OVER!")
+                print("Ugh u lost! Shucks")
                 s1.hideturtle()
                 for obs in obstacles:
                     obs.hideturtle()
@@ -101,6 +191,6 @@ while True:
 
     window.update()
 
-    # Exit if no lives left
+    # exit if no lives left ahhh all done yay!
     if lives <= 0:
         break
