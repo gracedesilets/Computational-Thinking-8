@@ -115,7 +115,7 @@ message.write("use W, A, S, D to move",
 window.update()
 time.sleep(3)
 message.clear()
-set_background("download")
+set_background("download (1)")
 
 #creating the sprite
 s1 = create_sprite("Josh2", -250, 0)
