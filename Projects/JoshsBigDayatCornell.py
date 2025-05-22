@@ -43,7 +43,7 @@ window.update()
 # clear the message before the game starts
 time.sleep(5)
 message.clear()
-#ok it took me a little while to figure out how to do this message stuff but it went pretty well?
+#i had to look online on how to do this on reddit but i guess it worked lol
 message = turtle.Turtle()
 message.color("white")
 message.penup()
@@ -184,7 +184,8 @@ while True:
                     obs.hideturtle()
                 window.update()
                 break
-
+#this makes the teacher disappear if it goes past the -300 point on the grid
+#i also looked on reddit how to do this, i hope that's ok since at least i didn't use AI
         elif s2.xcor() < -300:
             s2.hideturtle()
             obstacles.remove(s2)
